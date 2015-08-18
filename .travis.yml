@@ -1,6 +1,6 @@
 language: scala
 script:
-  - activator clean test
+  - sbt ++$TRAVIS_SCALA_VERSION clean test
 jdk:
   - oraclejdk8
 scala:

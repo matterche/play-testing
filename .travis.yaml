@@ -1,0 +1,7 @@
+language: scala
+script:
+  - activator clean test
+jdk:
+  - oraclejdk8
+scala:
+  - 2.11.7

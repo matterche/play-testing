@@ -21,7 +21,6 @@ class FooBarService @Inject()(fooGateway: FooGateway, barGateway: BarGateway) {
     result.recover {
       case t: Throwable =>
         Logger.error(s"error getting stuff from internet", t)
-        // no details for this player
         None
     }
 

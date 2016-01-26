@@ -9,9 +9,10 @@ import play.api.libs.ws.WSClient
 
 import scala.concurrent.Future
 
-class FooGateway @Inject()(ws: WSClient) {
+class FooGateway @Inject()(ws: WSClient,@Named("baseUrl") baseUrl: String = "http://httpbin.org") {
+
   def foo(): Future[Option[JsValue]] = {
-    ws.url("http://httpbin.org/get").get().map {
+    ws.url(s"$baseUrl/get").get().map {
       response =>
         response.status match {
           case OK => Some(response.json)

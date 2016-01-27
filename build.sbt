@@ -13,7 +13,8 @@ libraryDependencies ++= Seq(
   ws,
   "org.scalatest" %% "scalatest" % "2.2.4" % "test",
   "de.leanovate.play-mockws" %% "play-mockws" % "2.4.0" % "test",
-  "org.scalatestplus" %% "play" % "1.4.0-M3" % "test"
+  "org.scalatestplus" %% "play" % "1.4.0-M3" % "test",
+  "org.mockito" % "mockito-core" % "1.9.5"
 )
 
 // Play provides two styles of routers, one expects its actions to be injected, the
